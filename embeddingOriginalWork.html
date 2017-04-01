@@ -1,8 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-	</head>
+	 <head>
+    <meta charset="utf-8">
+    <title>Show RSS Feed</title>
+    <script src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("feeds", "1")
+    </script>
+  </head>
+  <script>
+    
+    function fetchRSSFeed() {
+      var element = document.getElementById("rss_feed");
+      var feed = new google.feeds.Feed(element.dataset.feed);     
+      feed.setNumEntries(element.dataset.count);
+      feed.load(showRSSFeed);
+    }
+
+    function showRSSFeed(result) {
+
+      var html = "";
+
+      if (!result.error) {
+        var entries = result.feed.entries;
+        for (var i = 0; i < entries.length; i++) {
+          html += "<li><a href='" + entries[i].link + "'target='_blank'>" + entries[i].title + "</a></li>"
+        }
+      } else {
+        html = "Error: " + result.error.message;
+      }
+
+      document.getElementById("rss_feed").innerHTML = "<ul>" + html + "</ul>";
+    }
+
+    window.onload = function() {
+      fetchRSSFeed();
+    }
+  </script>
 	<body>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/FnCdOQsX5kc" frameborder="0" allowfullscreen></iframe>
 		
@@ -17,7 +51,14 @@
 		<!--
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300860.75867151655!2d-166.8559738203566!3d53.905540462253654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x57abb0a2c1167377%3A0x6fe44e9b4e08f73e!2sUnalaska%2C+AK!5e0!3m2!1sen!2sus!4v1490837154553" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		-->
+        
+        
+        
 		<img src="http://students.washington.edu/pes/Images/UW%20Seal.GIF" alt="Mountain View" style="width:304px;height:304px;">
-
+        
+            <div id="rss_feed" 
+         data-feed="http://feeds.labnol.org/labnol" 
+         data-count="12">Loading RSS Feed..</div>
+        
 	</body>
 </html>
