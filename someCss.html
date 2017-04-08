@@ -15,32 +15,48 @@
 			background-color: lightblue;
 		}
 
-		img {
-			height: 50px;
-			width: 50px;
+        .resize {
+            width:50px;
+			height:50px;
 		}
+        
+        .container {
+            position: relative;
+        }
 
-		img.two {
-			height: 1000px;
-			width: 1000px;
-		}
-
-		h1 {
-			text-align: center;
-		}
-
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+        }
+        .else { 
+            width: 100%;
+            height: auto;
+            margin:20px 20px 20px 20px;
+        }
+        
+        p.dashed {
+            border-style: dashed;
+            padding: 20px;
+            text-align: center;
+        }
+        
 	</style>
 </head>
 <body>
 	<p class="serif">Paragraph 1 In one font.</p>
 	<p class="sansserif"> Paragraph 2, in another font.</p>
-	<img class="img.one" src="http://i0.kym-cdn.com/entries/icons/facebook/000/016/212/manning.jpg" title="the goat pt. 2">
-
-	<img class ="img.one" src="https://res.cloudinary.com/teepublic/image/private/s--3-Z0L1P5--/b_rgb:484849,c_limit,f_jpg,h_800,q_90,w_800/v1446235264/production/designs/250980_1.jpg" title="the goat">
-
-	<div class="img.two">
-		<img src=src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg"/>
-		<p class="h1"> HELLO </p>
-	</div>
+	<p><img class="resize" src="http://i0.kym-cdn.com/entries/icons/facebook/000/016/212/manning.jpg" title="the goat pt. 2">
+	<img class="resize" src="https://res.cloudinary.com/teepublic/image/private/s--3-Z0L1P5--/b_rgb:484849,c_limit,f_jpg,h_800,q_90,w_800/v1446235264/production/designs/250980_1.jpg" title="the goat"></p>
+    
+    <div class="container">
+      <img class="else"  src="https://www.travelalaska.com/~/media/Images/TravelAlaska/Content/HomePage/ChugachMountains.jpg" width="500" height="300">
+      <div class="center">Centered</div>
+    </div>
+    
+    <p class="dashed">ayy lmao</p>
+    
 </body>
 </html>
