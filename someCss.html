@@ -15,34 +15,34 @@
 			background-color: lightblue;
 		}
 
-        .resize {
-            width:50px;
-			height:50px;
-		}
-        
-        .container {
-            position: relative;
-        }
+		.resize {
+		    width:50px;
+				height:50px;
+			}
 
-        .center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 18px;
-        }
-        .else { 
-            width: 100%;
-            height: auto;
-            margin:20px 20px 20px 20px;
-        }
-        
-        p.dashed {
-            border-style: dashed;
-            padding: 20px;
-            text-align: center;
-        }
-        
+		.container {
+		    position: relative;
+		}
+
+		.center {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    font-size: 18px;
+		}
+		.else { 
+		    width: 100%;
+		    height: auto;
+		    margin:20px 20px 20px 20px;
+		}
+
+		p.dashed {
+		    border-style: dashed;
+		    padding: 20px;
+		    text-align: center;
+		}
+
 	</style>
 </head>
 <body>
@@ -50,13 +50,13 @@
 	<p class="sansserif"> Paragraph 2, in another font.</p>
 	<p><img class="resize" src="http://i0.kym-cdn.com/entries/icons/facebook/000/016/212/manning.jpg" title="the goat pt. 2">
 	<img class="resize" src="https://res.cloudinary.com/teepublic/image/private/s--3-Z0L1P5--/b_rgb:484849,c_limit,f_jpg,h_800,q_90,w_800/v1446235264/production/designs/250980_1.jpg" title="the goat"></p>
+
+	<div class="container">
+	<img class="else"  src="https://www.travelalaska.com/~/media/Images/TravelAlaska/Content/HomePage/ChugachMountains.jpg" width="500" height="300">
+	<div class="center">Centered</div>
+	</div>
     
-    <div class="container">
-      <img class="else"  src="https://www.travelalaska.com/~/media/Images/TravelAlaska/Content/HomePage/ChugachMountains.jpg" width="500" height="300">
-      <div class="center">Centered</div>
-    </div>
-    
-    <p class="dashed">ayy lmao</p>
-    
+	<p class="dashed">ayy lmao</p>
+
 </body>
 </html>
