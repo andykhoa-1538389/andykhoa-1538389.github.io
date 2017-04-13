@@ -4,10 +4,6 @@ body {
 
 div {
     background-color: #8E41D5;
-    transform: rotate(10deg);
-    animation-name: example;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
 }
 
 p {
@@ -15,21 +11,10 @@ p {
     font-family: "Arial";
 }
 
-@keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
-}
-
 a {
     color: white;
     font-weight: bold;
     font-size: 24px;
-}
-
-a:hover {
-    color: hotpink;
 }
 
 h3 {
