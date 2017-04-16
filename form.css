@@ -1,0 +1,32 @@
+body {
+    background-color: antiquewhite;
+    
+}
+
+fieldset {
+    font-family: "arial";
+    border-radius: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+input {
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+label {
+    margin-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px
+}
+
+legend {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
